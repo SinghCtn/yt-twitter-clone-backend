@@ -1,0 +1,16 @@
+{
+  "name": "02-yt-twitter-clone-backend",
+  "version": "1.0.0",
+  "description": "Learning backend from chai aur code channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "chai"
+  ],
+  "author": "Chetan Singh",
+  "license": "ISC"
+}
