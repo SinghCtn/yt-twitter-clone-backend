@@ -1,12 +1,12 @@
 import { Router } from "express";
 import { registerUser } from "../controller/user.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
-import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 const router = Router();
 
 router.route("/register").post(
   upload.fields([
+    // multer middleware
     {
       name: "avatar",
       maxCount: 1,
@@ -16,7 +16,7 @@ router.route("/register").post(
       maxCount: 1,
     },
   ]),
-  registerUser
+  registerUser //register user controller
 );
 
 export default router;

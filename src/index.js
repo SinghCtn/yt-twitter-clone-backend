@@ -5,7 +5,7 @@ import connnectDB from "./db/index.js";
 import { app } from "./app.js";
 
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 }); //here we are loading the env file in the starting of the project
 
 connnectDB()
