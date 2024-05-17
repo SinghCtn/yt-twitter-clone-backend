@@ -58,7 +58,7 @@ userSchema.pre("save", async function (next) {
   //pre hook is used to perform task before some action https://mongoosejs.com/docs/middleware.html#pre
   if (!this.isModified("password")) return next(); // here we are encrypting the password only if password is changed and not everytime any feild is changed
 
-  this.password = bcrypt.hash(this.password, 10);
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
