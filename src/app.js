@@ -21,4 +21,18 @@ app.use(express.static("public")); // this configuration is allowing us to store
 
 app.use(cookieParser()); // this cookie-parser allows us to interact with the cookies that are securely stored on the user's browser
 
+/*----------x----------x----------x----------x----------x----------x----------x----------x----------x----------*/
+
+//routes import
+
+import userRouter from "./routes/user.routes.js";
+
+/*----------x----------x----------x----------x----------x----------x----------x----------x----------x----------*/
+
+// routes declaration
+
+// as we are defining router in the different folder we need to use middleware syntax to access it
+
+app.use("/api/v1/users", userRouter);
+
 export { app };
